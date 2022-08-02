@@ -1,3 +1,13 @@
 <app-divider>Table Component</app-divider>
 
 <app-table [data]="data" [headers]="headers" [className]="'celled'"></app-table>
+
+<app-divider>Tab Component</app-divider>
+
+<app-tabs>
+    <!-- localhost:4200/collections/ -->
+    <a [routerLink]="['./']" [routerLinkActiveOptions]="{exact : true}" routerLinkActive="active" class="item">Bio</a>
+    <!-- localhost:4200/collections/companies -->
+    <a [routerLink]="['companies']" routerLinkActive="active" class="item">Companies</a>
+    <a routerLink="partners" routerLinkActive="active" class="item">Partners</a>
+</app-tabs>

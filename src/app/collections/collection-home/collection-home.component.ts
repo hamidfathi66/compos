@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CollectionHomeComponent implements OnInit {
+  //pathCompanies ='companies';
+  
   data = [
     { name: 'ali', age: 24, job: 'designer', employed: true },
     { name: 'reza', age: 29, job: 'engineer', employed: true },
