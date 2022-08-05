@@ -1,6 +1,11 @@
 <app-divider>Table Component</app-divider>
 
+<button (click)="changeFirstItem()">Change first Item</button>
+
+<button (click)="DestroyFirstItem()">destroy first Item</button>
+
 <app-table [data]="data" [headers]="headers" [className]="'celled'"></app-table>
+<!-- <app-table  *ngFor="let item of data" [data]="item" [name]="item.name" [headers]="headers" [className]="'basic'"></app-table> -->
 
 <app-divider>Tab Component</app-divider>
 

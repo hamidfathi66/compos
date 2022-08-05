@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-collection-home',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./collection-home.component.css']
 })
 
-export class CollectionHomeComponent implements OnInit {
+export class CollectionHomeComponent implements OnInit, OnChanges  {
   //pathCompanies ='companies';
   
   data = [
@@ -22,8 +22,22 @@ export class CollectionHomeComponent implements OnInit {
     { key: 'employed', value: 'Employed', show: true }
   ];
 
+  changeFirstItem() {
+    this.data[0].name = "new data";
+  }
+  
+  DestroyFirstItem() {
+    this.data.splice(0, 1);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  ngOnChanges(changes: SimpleChanges): void {
+    // console.log('ngOnChanges');
+    // console.log(changes);
+    // console.log(this.data);
   }
 }

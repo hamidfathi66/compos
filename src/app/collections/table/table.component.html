@@ -1,3 +1,7 @@
+<!-- <button (click)="addNewData()">Add new Data</button> -->
+
+<!-- {{name}} -->
+
 <table class="ui table" [ngClass]="className">
     <thead>
         <tr>
@@ -8,8 +12,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of data">
+        <!-- <tr> -->
             <ng-container *ngFor="let header of headers">
                 <td *ngIf="header.show">{{item[header.key]}}</td>
+                <!-- <td *ngIf="header.show">{{data[header.key]}}</td> -->
             </ng-container>
         </tr>
     </tbody>
